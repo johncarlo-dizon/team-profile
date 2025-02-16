@@ -34,6 +34,20 @@ class _MyAppState extends State<MyApp> {
       "email": "joel.dizon@email.com",
       "image": "assets/joel.png"
     },
+    {
+      "name": "Joseph Lee Basilio",
+      "address": "Laug Pampanga",
+      "phone": "+63 944 678 9012",
+      "email": "joseph.lee@email.com",
+      "image": "assets/joseph.jpg"
+    },
+    {
+      "name": "Jomel Simbillo",
+      "address": "Clark Freeport Zone",
+      "phone": "+63 955 789 0123",
+      "email": "jomel.s@email.com",
+      "image": "assets/jomel.jpg"
+    },
   ];
 
   @override
@@ -87,6 +101,18 @@ class _MyAppState extends State<MyApp> {
                                 height: 40, width: 40, fit: BoxFit.cover),
                           ),
                           Text('Joseph'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          ClipOval(
+                            child: Image.asset(
+                                'assets/jomel.jpg', // Replace with your image path
+                                height: 40,
+                                width: 40,
+                                fit: BoxFit.cover),
+                          ),
+                          Text('Jomel'),
                         ],
                       ),
                     ],
