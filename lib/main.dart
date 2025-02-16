@@ -27,6 +27,13 @@ class _MyAppState extends State<MyApp> {
       "email": "john.dizon@email.com",
       "image": "assets/jc.png"
     },
+    {
+      "name": "Joel Dizon",
+      "address": "Arayat, Pampanga",
+      "phone": "+63 922 456 7890",
+      "email": "joel.dizon@email.com",
+      "image": "assets/joel.png"
+    },
   ];
 
   @override
@@ -49,6 +56,30 @@ class _MyAppState extends State<MyApp> {
                   content: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
+                      Column(
+                        children: [
+                          ClipOval(
+                            child: Image.asset(
+                                'assets/jc.png', // Replace with your image path
+                                height: 40,
+                                width: 40,
+                                fit: BoxFit.cover),
+                          ),
+                          Text('John Carlo'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          ClipOval(
+                            child: Image.asset(
+                                'assets/joel.png', // Replace with your image path
+                                height: 40,
+                                width: 40,
+                                fit: BoxFit.cover),
+                          ),
+                          Text('Joel'),
+                        ],
+                      ),
                       Column(
                         children: [
                           ClipOval(
