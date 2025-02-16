@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text('TWICE'),
+        middle: Text('CODE BROS'),
         trailing: CupertinoButton(
           child: Icon(
             CupertinoIcons.settings,
