@@ -32,6 +32,51 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('TWICE'),
+        trailing: CupertinoButton(
+          child: Icon(
+            CupertinoIcons.settings,
+            size: 20,
+            color: CupertinoColors.destructiveRed,
+          ),
+          onPressed: () {
+            showCupertinoDialog(
+              context: context,
+              builder: (context) {
+                return CupertinoAlertDialog(
+                  title: Text('Meet our Team'),
+                  content: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          ClipOval(
+                            child: Image.asset('assets/joseph.jpg',
+                                height: 40, width: 40, fit: BoxFit.cover),
+                          ),
+                          Text('Joseph'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  actions: [
+                    CupertinoButton(
+                      child: Text(
+                        'Close',
+                        style: TextStyle(color: CupertinoColors.destructiveRed),
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    )
+                  ],
+                );
+              },
+            );
+          },
+        ),
+      ),
       child: SafeArea(
         child: ListView.separated(
           itemCount: profiles.length,
@@ -55,7 +100,6 @@ class _MyAppState extends State<MyApp> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Profile Image
                   ClipOval(
                     child: Image.asset(
                       profile["image"]!,
@@ -65,8 +109,6 @@ class _MyAppState extends State<MyApp> {
                     ),
                   ),
                   SizedBox(width: 15),
-
-                  // Profile Information
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
